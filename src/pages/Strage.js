@@ -1,9 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
@@ -11,36 +8,7 @@ import Stack from 'react-bootstrap/Stack'
 import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 import { useNavigate } from "react-router-dom";
-
-// ナビゲーションバー
-// メインの中にあると見づらいから外だし
-function MyNavbar() {
-  return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">ホーム</Nav.Link>
-            <Nav.Link href="#link">リンク</Nav.Link>
-            <NavDropdown title="そのたプルダウン" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">これとか</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                別にプルダウンは要らんな。
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">それとか</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                ながーーーーいのとか
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
+import MyNavbar from '../components/MyNavBar';
 
 // メインアプリケーション
 function Strage() {
@@ -66,7 +34,7 @@ function Strage() {
     {/* 店舗情報エリア */}
     <Container> 
       <Row xs={1}>
-        <label>トランクルームほげほげ</label>
+        <label>トランクルームサンプル</label>
       </Row>
       <Row xs={1} md={2}>
         <Col>
@@ -118,9 +86,9 @@ function Strage() {
         </Col>
         <Col>
           <Stack>
-            <label>アクセスやら</label>
-            <label>住所やら</label>
-            <label>電話番号やら</label>
+            <label>アクセス</label>
+            <label>住所</label>
+            <label>電話番号　などの情報を列記</label>
           </Stack>
         </Col>
       </Row>
