@@ -13,8 +13,8 @@ function getNotifications(setNotifications) {
     const handleSubmission = async (event) => {
     try {
         await axios
-          .post(
-            'https://akqjc7swnl.execute-api.ap-southeast-2.amazonaws.com/default/getNodifications',
+          .get(
+            'https://akqjc7swnl.execute-api.ap-southeast-2.amazonaws.com/default/getNodifications?customerId=12345',
             event,
             {
               headers: {
@@ -48,26 +48,6 @@ function MyNotifications() {
     // まだステートが無い（非同期APIが終わっていない）場合はリターン
     if(!notifications) return;
 
-    // このリストを、本来はAPIで取得する
-    /*
-    notifications = [
-        {
-            "notificationId": "0002",
-            "date": "2023/11/21",
-            "title": "トランクルーム CUBE 秋葉原店 2024/01 ご請求確定のお知らせ",
-            "content": "...",
-            "hasOpened": true
-        },
-        {
-            "notificationId": "0001",
-            "date": "2023/11/20",
-            "title": "トランクルーム CUBE 秋葉原店 ご利用開始",
-            "content": "...",
-            "hasOpened": true
-        },
-    ];
-    */
-    
     return (
         <Container>
             <hr/>
