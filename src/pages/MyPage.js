@@ -298,7 +298,8 @@ function MyPage() {
     </Container>
   );
 }
-export default withAuthenticator(MyPage);
+export default MyPage;
+//export default withAuthenticator(MyPage);
 
 const dict = {
     'ja': {
@@ -313,7 +314,7 @@ const dict = {
       'Enter your code': '確認コードを入力してください',
       'Enter your password': 'パスワードを入力してください',
       'Enter your username': 'ユーザー名を入力してください',
-      'Forget your password? ': 'パスワードをお忘れの方 ',
+      'Forgot your password? ': 'パスワードをお忘れの方 ',
       'Have an account? ': 'アカウント登録済みの方 ',
       'Hello': 'こんにちは ',
       'Incorrect username or password': 'ユーザー名またはパスワードが異なります',
