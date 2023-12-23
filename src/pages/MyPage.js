@@ -5,13 +5,52 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import React , {useState, useEffect} from 'react'
+import axios from 'axios'
+
+// お知らせAPI呼び出し
+function getNotifications(setNotifications) {
+    const handleSubmission = async (event) => {
+    try {
+        await axios
+          .post(
+            'https://akqjc7swnl.execute-api.ap-southeast-2.amazonaws.com/default/getNodifications',
+            event,
+            {
+              headers: {
+                'Content-type': 'text/json',
+              },
+            },
+          )
+          .then((res) => {
+            // 終わったら画面レンダリングするために、ステートに値をセット
+            setNotifications(res['data']);
+          })
+      } catch (err) {
+        console.error(err)
+        alert('[ERROR] POSTに失敗しました。')
+      }
+    }
+
+    return(handleSubmission());
+}
 
 // お知らせエリア
 function MyNotifications() {
+    // APIの結果を格納するステート
+    const [notifications, setNotifications] = useState(null);
 
+    // API呼び出し（副作用があるのでuseEffect内で）
+    useEffect(() => {
+        getNotifications(setNotifications);
+    }, []);
+
+    // まだステートが無い（非同期APIが終わっていない）場合はリターン
+    if(!notifications) return;
 
     // このリストを、本来はAPIで取得する
-    var notifications = [
+    /*
+    notifications = [
         {
             "notificationId": "0002",
             "date": "2023/11/21",
@@ -27,7 +66,8 @@ function MyNotifications() {
             "hasOpened": true
         },
     ];
-      
+    */
+    
     return (
         <Container>
             <hr/>
