@@ -32,7 +32,7 @@ function getNotifications(setNotifications) {
       }
     }
 
-    return(handleSubmission());
+    handleSubmission();
 }
 
 // お知らせエリア
