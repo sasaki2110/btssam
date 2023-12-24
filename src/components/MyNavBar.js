@@ -16,7 +16,7 @@ function MyNavbar() {
               <Nav.Link href="/mypage">マイページ</Nav.Link>
               <Nav.Link href="#link">リンク</Nav.Link>
               <NavDropdown title="プルダウン" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">サンプル１</NavDropdown.Item>
+                <NavDropdown.Item href="/memberspage">会員専用ページ</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">サンプル２</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
