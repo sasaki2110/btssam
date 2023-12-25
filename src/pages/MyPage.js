@@ -118,21 +118,23 @@ function MyContracts() {
                         </Row>
                         <Row xs={1} md={2}>
                             <Col>月額料金</Col>
-                            <Col>{contract.priceMonth}</Col>
+                            <Col className="text-end">{contract.priceMonth.toLocaleString()}円</Col>
                         </Row>
                         <Row xs={1} md={2}>
                             <Col>管理費</Col>
-                            <Col>{contract.priceManagement}</Col>
+                            <Col className="text-end">{contract.priceManagement.toLocaleString()}円</Col>
                         </Row>
                         <Row xs={1} md={2}>
                             <Col>合計月額料金</Col>
-                            <Col>{contract.totalPrice}</Col>
+                            <Col className="text-end">{contract.totalPrice.toLocaleString()}円</Col>
                         </Row>
                     </Col>
                 </Row>
-                <Row>
-                    <Col><Button variant="outline-primary">契約書をダウンロード</Button></Col>
-                    <Col><Button variant="outline-primary">利用規約をダウンロード</Button></Col>
+                <Row  className="text-center">
+                        <Col></Col>
+                        <Col><Button variant="outline-primary">契約書をダウンロード</Button></Col>
+                        <Col><Button variant="outline-primary">利用規約をダウンロード</Button></Col>
+                        <Col></Col>
                 </Row>
                 </Container>
             ))}
@@ -267,7 +269,7 @@ function Me() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col ><Button variant="outline-primary">お客様情報の変更</Button></Col>
+                    <Col className="text-center"><Button variant="outline-primary">お客様情報の変更</Button></Col>
                 </Row>
             </Container>
 
