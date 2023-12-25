@@ -133,10 +133,11 @@ function Strage() {
                     <label>{room.fee}</label>
                   </td>
                   <td>
-                    <Button onClick={() => handleClickReserv(room.roomno)} >
+                    <Button variant="outline-primary" onClick={() => handleClickReserv(room.roomno)} >
                       見学
                     </Button>
-                    <Button>
+                    　
+                    <Button variant="outline-primary">
                       契約
                     </Button>
                   </td>

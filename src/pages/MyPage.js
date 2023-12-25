@@ -131,8 +131,8 @@ function MyContracts() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><Button>契約書をダウンロード</Button></Col>
-                    <Col><Button>利用規約をダウンロード</Button></Col>
+                    <Col><Button variant="outline-primary">契約書をダウンロード</Button></Col>
+                    <Col><Button variant="outline-primary">利用規約をダウンロード</Button></Col>
                 </Row>
                 </Container>
             ))}
@@ -197,8 +197,8 @@ function MyPayments() {
                             <td>{payment.target}</td>
                             <td>{payment.dueDate}</td>
                             <td>{payment.status}</td>
-                            <td><Button>請求書発行</Button></td>
-                            <td><Button>領収書発行</Button></td>
+                            <td><Button className="btn btn-link">請求書発行</Button></td>
+                            <td><Button className="btn btn-link">領収書発行</Button></td>
                         </tr>
                     ))}
                 </tbody>
@@ -267,7 +267,7 @@ function Me() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><Button>お客様情報の変更</Button></Col>
+                    <Col ><Button variant="outline-primary">お客様情報の変更</Button></Col>
                 </Row>
             </Container>
 
