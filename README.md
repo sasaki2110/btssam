@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+# つまり、Reactとbootstrapで作ったモックってこったな。
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 つまり、Reactとbootstrapで作ったモックってこったな。
